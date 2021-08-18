@@ -1,22 +1,17 @@
 {
   "name": "TinyGPSPlus",
-  "version": "1.0.2",
-  "keywords": "gps,NMEA",
   "description": "A new, customizable Arduino NMEA parsing library",
-  "repository":
-  {
+  "keywords": "gps,NMEA",
+  "authors":
+    {
+       "name": "Mikal Hart",
+       "url": "http://arduiniana.org",
+    },
+  "repository":{
     "type": "git",
     "url": "https://github.com/mikalhart/TinyGPSPlus.git"
   },
-  "authors":
-  [
-    {
-       "name": "Mikal Hart",
-       "email": "mikal@arduniana.org",
-       "url": "http://arduiniana.org",
-       "maintainer": true
-    }
-  ],
+  "version": "0.0.1",
   "frameworks": "arduino",
   "platforms": "*"
 }
