@@ -1,4 +1,4 @@
-# TinyGPSPlus
+# TinyGPSPlus-ESP32
 
 A new, customizable Arduino NMEA parsing library
 A *NEW* Full-featured GPS/NMEA Parser for Arduino
