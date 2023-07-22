@@ -283,11 +283,7 @@ bool TinyGPSPlus::endOfTermHandler()
 /* static */
 double TinyGPSPlus::distanceBetween(double lat1, double long1, double lat2, double long2)
 {
-  // returns distance in meters between two positions, both specified
-  // as signed decimal-degrees latitude and longitude. Uses great-circle
-  // distance computation for hypothetical sphere of radius 6372795 meters.
-  // Because Earth is no exact sphere, rounding errors may be up to 0.5%.
-  // Courtesy of Maarten Lamers
+  // Based on http://en.wikipedia.org/wiki/Earth_radius and some Google Maps distance calculations i think this change produces more accurate results.
   double delta = radians(long1-long2);
   double sdlong = sin(delta);
   double cdlong = cos(delta);
@@ -303,7 +299,7 @@ double TinyGPSPlus::distanceBetween(double lat1, double long1, double lat2, doub
   delta = sqrt(delta);
   double denom = (slat1 * slat2) + (clat1 * clat2 * cdlong);
   delta = atan2(delta, denom);
-  return delta * 6372795;
+  return delta * 6371009;
 }
 
 double TinyGPSPlus::courseTo(double lat1, double long1, double lat2, double long2)
